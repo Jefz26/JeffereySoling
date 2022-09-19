@@ -68,49 +68,12 @@
     width: calc(250px * 14);
     }
     .slider .img-track {
-    height: 20vh;
-    width: 20vw;
+    height: 25vh;
+    width: 25vw;
     }
 img {
     height:15.2rem;
     width: 15.2rem;
     margin: 10px;
     padding: 10px;
-}
-.modal {
-    width:70%;
-    height:70%;
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items:center;
-    background-color: rgba(0,0,0,0,733);
-    margin-top: -1px;
-    animation: zoom 0.3s ease-in-out;
-}
-@keyframes zoom {
-    from {
-        transform: scale(0);
-    }
-    to {
-        transform: scale(1);
-    }
-}
-.modal img {
-    width: 50%;
-    object-fit:cover;
-}
-.closeBtn {
-    color: rgba(255, 255, 255, 0.87);
-    font-size: 25px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 20px;
-    cursor:pointer;
-    transition:0.2s ease-in-out;
-}
-.closeBtn:hover {
-    color:rgba(255, 255, 255);
 }
