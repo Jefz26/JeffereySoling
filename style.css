@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap');
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.head-container {
+    float: center;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+    font-size: 30px;
+}
+
+@-webkit-keyframes scroll {
+    0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    }
+    100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+    transform: translateX(calc(-250px * 7));
+    }
+    }
+    @keyframes scroll {
+    0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    }
+    100% {
+    -webkit-transform: translateX(calc(-250px * 7));
+    transform: translateX(calc(-250px * 7));
+    }
+    }
+    body {
+        background-image:url("../Portfolio/Main-image/1920-over-clouds.jpg")
+    }
+    .slider {
+    background: 1px;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+    height: 35vh;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 90vw;
+    }
+    .slider::before, .slider::after {
+    background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+    }
+    .slider::after {
+    right: 0;
+    top: 0;
+    -webkit-transform: rotateZ(180deg);
+    transform: rotateZ(180deg);
+    }
+    .slider::before {
+    left: 0;
+    top: 0;
+    }
+    .slider .track {
+    -webkit-animation: scroll 45s, linear infinite;
+    animation: scroll 45s, linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+    }
+    .slider .img-track {
+    height: 20vh;
+    width: 20vw;
+    }
+img {
+    height:15.2rem;
+    width: 15.2rem;
+    margin: 10px;
+    padding: 10px;
+}
+.modal {
+    width:70%;
+    height:70%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: rgba(0,0,0,0,733);
+    margin-top: -1px;
+    animation: zoom 0.3s ease-in-out;
+}
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+.modal img {
+    width: 50%;
+    object-fit:cover;
+}
+.closeBtn {
+    color: rgba(255, 255, 255, 0.87);
+    font-size: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+    cursor:pointer;
+    transition:0.2s ease-in-out;
+}
+.closeBtn:hover {
+    color:rgba(255, 255, 255);
+}
